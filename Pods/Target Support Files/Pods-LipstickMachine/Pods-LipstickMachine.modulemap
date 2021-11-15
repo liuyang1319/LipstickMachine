@@ -1,0 +1,6 @@
+module Pods_LipstickMachine {
+  umbrella header "Pods-LipstickMachine-umbrella.h"
+
+  export *
+  module * { export * }
+}

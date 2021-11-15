@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OpenAdvView" customModule="LipstickMachine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="xNR-qk-unz">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjh-56-qtv">
+                    <rect key="frame" x="324" y="54" width="80" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="9al-o2-Vhu"/>
+                        <constraint firstAttribute="height" constant="30" id="gIm-zs-MT6"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="5秒">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="urs-r2-aGG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="bjh-56-qtv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="HVK-5P-l1y"/>
+                <constraint firstAttribute="bottom" secondItem="xNR-qk-unz" secondAttribute="bottom" id="RPg-kk-l0D"/>
+                <constraint firstItem="xNR-qk-unz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X1n-nE-LxY"/>
+                <constraint firstItem="xNR-qk-unz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dbk-FB-cri"/>
+                <constraint firstAttribute="trailing" secondItem="xNR-qk-unz" secondAttribute="trailing" id="j8v-fW-vrt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bjh-56-qtv" secondAttribute="trailing" constant="10" id="m7r-Yo-0Ms"/>
+            </constraints>
+            <connections>
+                <outlet property="btn" destination="bjh-56-qtv" id="hnt-b9-4pc"/>
+                <outlet property="img" destination="xNR-qk-unz" id="yYY-Q5-W4J"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="launchScreen" width="375" height="667"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceController" customModule="LipstickMachine" customModuleProvider="target">
+            <connections>
+                <outlet property="QRImage" destination="0sN-Zg-J6H" id="kLY-Pq-pc8"/>
+                <outlet property="copyBtn" destination="6D9-ZG-21y" id="QRk-Pv-dz1"/>
+                <outlet property="service" destination="APX-WP-vee" id="8Kn-5K-Ovb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫码加客服微信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFd-FN-LXn">
+                    <rect key="frame" x="123.5" y="40" width="128.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0sN-Zg-J6H">
+                    <rect key="frame" x="91" y="71" width="193" height="193"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="193" id="eU5-Nw-sNk"/>
+                        <constraint firstAttribute="height" constant="193" id="hwj-ud-n0n"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-aq-AP5">
+                    <rect key="frame" x="54" y="289" width="267" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专属客服微信号kouhongji-001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APX-WP-vee">
+                            <rect key="frame" x="31" y="8" width="205.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="APX-WP-vee" firstAttribute="centerX" secondItem="bgT-aq-AP5" secondAttribute="centerX" id="Ozy-Tw-jHc"/>
+                        <constraint firstAttribute="height" constant="34" id="RGJ-Sr-rF8"/>
+                        <constraint firstItem="APX-WP-vee" firstAttribute="centerY" secondItem="bgT-aq-AP5" secondAttribute="centerY" id="biX-FD-IB9"/>
+                        <constraint firstAttribute="width" constant="267" id="nxq-wD-cwk"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D9-ZG-21y">
+                    <rect key="frame" x="54" y="338" width="267" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="wrg-qz-dJs"/>
+                    </constraints>
+                    <state key="normal" title="复制">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="copyBtnClicked" destination="-1" eventType="touchUpInside" id="nIb-EC-lgm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pFd-FN-LXn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0cr-c4-Kaj"/>
+                <constraint firstItem="0sN-Zg-J6H" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7R7-Ij-VEY"/>
+                <constraint firstItem="bgT-aq-AP5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KKe-h7-sIa"/>
+                <constraint firstItem="0sN-Zg-J6H" firstAttribute="top" secondItem="pFd-FN-LXn" secondAttribute="bottom" constant="10" id="PYu-rb-d7m"/>
+                <constraint firstItem="pFd-FN-LXn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="bbg-Ka-LNX"/>
+                <constraint firstItem="bgT-aq-AP5" firstAttribute="top" secondItem="0sN-Zg-J6H" secondAttribute="bottom" constant="25" id="ey6-83-AUO"/>
+                <constraint firstItem="6D9-ZG-21y" firstAttribute="leading" secondItem="bgT-aq-AP5" secondAttribute="leading" id="h9t-mM-VHO"/>
+                <constraint firstItem="6D9-ZG-21y" firstAttribute="top" secondItem="bgT-aq-AP5" secondAttribute="bottom" constant="15" id="kea-jx-Cl9"/>
+                <constraint firstItem="6D9-ZG-21y" firstAttribute="trailing" secondItem="bgT-aq-AP5" secondAttribute="trailing" id="tBX-oT-gOK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154.27286356821591"/>
+        </view>
+    </objects>
+</document>
