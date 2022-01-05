@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RechargeController" customModule="LipstickMachine" customModuleProvider="target">
+            <connections>
+                <outlet property="integral" destination="fEG-S8-D3j" id="n47-a2-cOB"/>
+                <outlet property="rechargeView" destination="sFe-It-NXw" id="1Nf-cu-52h"/>
+                <outlet property="rechargeViewHeight" destination="JQV-7V-xcw" id="4Jt-H2-AbJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-It-NXw">
+                    <rect key="frame" x="15" y="15" width="345" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="JQV-7V-xcw"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="7Rw-I0-4pd"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zz-Sc-tNc">
+                    <rect key="frame" x="15" y="58" width="345" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="rE2-ep-S0p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="我要充值" backgroundImage="recharge_commit_btn_background">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="rechargeBtnClicked" destination="-1" eventType="touchUpInside" id="YyS-rZ-nyP"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前积分：166" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEG-S8-D3j">
+                    <rect key="frame" x="136.5" y="114" width="102" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.9882352941176471" green="0.34901960784313724" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKA-sJ-cD0">
+                    <rect key="frame" x="15" y="147" width="345" height="110"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首充规则：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-dj-ewd">
+                            <rect key="frame" x="0.0" y="0.0" width="76.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.第一次充值的用户可享受双倍充值福利 例如：充值6 元应获得36积分 首次充值则会获得72积分 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRl-Af-Wd2">
+                            <rect key="frame" x="0.0" y="28" width="345" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.所以第一次充值越多越划算哦，每个用户仅可享受一 次！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4L-z9-JfB">
+                            <rect key="frame" x="0.0" y="74" width="345" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="d4L-z9-JfB" secondAttribute="bottom" id="4xt-uu-egP"/>
+                        <constraint firstItem="ZRl-Af-Wd2" firstAttribute="leading" secondItem="KKA-sJ-cD0" secondAttribute="leading" id="7gz-sx-T2h"/>
+                        <constraint firstItem="d4L-z9-JfB" firstAttribute="leading" secondItem="KKA-sJ-cD0" secondAttribute="leading" id="MYl-4Q-9NK"/>
+                        <constraint firstItem="d4L-z9-JfB" firstAttribute="top" secondItem="ZRl-Af-Wd2" secondAttribute="bottom" constant="10" id="V7Y-gE-j06"/>
+                        <constraint firstItem="DFq-dj-ewd" firstAttribute="leading" secondItem="KKA-sJ-cD0" secondAttribute="leading" id="gOZ-rs-Rxl"/>
+                        <constraint firstAttribute="trailing" secondItem="d4L-z9-JfB" secondAttribute="trailing" id="ntr-zF-5sv"/>
+                        <constraint firstItem="DFq-dj-ewd" firstAttribute="top" secondItem="uQe-ZN-rpB" secondAttribute="top" id="oKi-TS-hvc"/>
+                        <constraint firstAttribute="trailing" secondItem="ZRl-Af-Wd2" secondAttribute="trailing" id="txe-Zi-Ghz"/>
+                        <constraint firstItem="ZRl-Af-Wd2" firstAttribute="top" secondItem="DFq-dj-ewd" secondAttribute="bottom" constant="10" id="uy2-8w-pHd"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="uQe-ZN-rpB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KKA-sJ-cD0" firstAttribute="top" secondItem="fEG-S8-D3j" secondAttribute="bottom" constant="15" id="3No-4v-Rua"/>
+                <constraint firstItem="fEG-S8-D3j" firstAttribute="top" secondItem="0Zz-Sc-tNc" secondAttribute="bottom" constant="10" id="7AT-eL-LTT"/>
+                <constraint firstItem="0Zz-Sc-tNc" firstAttribute="top" secondItem="sFe-It-NXw" secondAttribute="bottom" constant="13" id="MdI-Zm-Nj4"/>
+                <constraint firstItem="fEG-S8-D3j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NR3-tH-9CP"/>
+                <constraint firstItem="KKA-sJ-cD0" firstAttribute="leading" secondItem="sFe-It-NXw" secondAttribute="leading" id="QP2-zH-Ukb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sFe-It-NXw" secondAttribute="trailing" constant="15" id="R1u-98-g0f"/>
+                <constraint firstItem="sFe-It-NXw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="Svh-3p-Kol"/>
+                <constraint firstItem="0Zz-Sc-tNc" firstAttribute="trailing" secondItem="sFe-It-NXw" secondAttribute="trailing" id="hRq-Ho-pbf"/>
+                <constraint firstItem="0Zz-Sc-tNc" firstAttribute="leading" secondItem="sFe-It-NXw" secondAttribute="leading" id="pm7-Ia-4Uh"/>
+                <constraint firstItem="sFe-It-NXw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="unR-H8-5iH"/>
+                <constraint firstItem="KKA-sJ-cD0" firstAttribute="trailing" secondItem="sFe-It-NXw" secondAttribute="trailing" id="yp7-nv-uz3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="154.27286356821591"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="recharge_commit_btn_background" width="345" height="46"/>
+    </resources>
+</document>
